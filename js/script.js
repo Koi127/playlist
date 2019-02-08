@@ -5,10 +5,10 @@ var song = ["起风了","山外小楼夜听雨","浪人琵琶","假装"];
 
 // BELOW Add 4 More arrays to store images_links, atists, song lengths, and links for each song
 // Make sure they match the same order as your array above
-var images_link=["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550131258&di=5248135fe0cd7af6192fa3e5596eee6a&imgtype=jpg&er=1&src=http%3A%2F%2Fp1.music.126.net%2Fiq4BV_8ek1o6x02DbQdcLQ%3D%3D%2F109951163321421723.jpg", 
-                 "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549536592899&di=dfe0d5877eb96aa9e09323d17daf2775&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2Fd42cb307b3dc2a372f6d31b6d0f0d019c90b57a3.png",
-                 "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1120717953,729915289&fm=26&gp=0.jpg",
-                 "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549536733892&di=9733d8ff26c8993d025c46835ed55a21&imgtype=0&src=http%3A%2F%2Fcdnimg103.lizhi.fm%2Faudio_cover%2F2017%2F09%2F11%2F2624020717320638471_320x320.jpg"
+var images_link=["http://puui.qpic.cn/qqvideo_ori/0/p0611zl7k8x_496_280/0", 
+                 "https://i.ytimg.com/vi/0Svh0gj0rnQ/maxresdefault.jpg",
+                 "https://m.media-amazon.com/images/I/81ExSek6FlL._SS500_.jpg",
+                 "https://i.ytimg.com/vi/BwCpXWscJ7U/maxresdefault.jpg"
                     
                     
 ];
@@ -63,19 +63,19 @@ function addSongInfo(){
 
 function displaySongInfo(){
     song.forEach(function(songs) {
-        $("#songs").append(songs+"<br><div class='space'></div>");
+        $("#songs").append("<div class='spaceTop'>"+songs+"<br><div class='spaceBottom'></div>");
     });
     images_link.forEach(function(image_links) {
-        $("#images").append("<img class='size' src='"+images_link+"'><br> <div class='big'></div>");
+        $("#images").append(`<img src="${image_links}" > <br> `);
     });
     length.forEach(function(lengths) {
-        $("#lengths").append(lengths+"<br><div class='space'></div>");
+        $("#lengths").append("<div class='spaceTop'>"+lengths+"<br><div class='spaceBottom'></div>");
     });
     link.forEach(function(links) {
         $("#links").append('<iframe class="size" src="'+links+'"></iframe>'+"<br><div class='big'></div>");
     });
     artist.forEach(function(artists) {
-        $("#artists").append(artists+"<br><div class='space'></div>");
+        $("#artists").append("<div class='spaceTop'>"+artists+"<br><div class='spaceBottom'></div>");
     });
 }
 
